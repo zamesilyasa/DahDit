@@ -12,7 +12,7 @@
   -->
 
 <resources>
-    <declare-styleable name="DottedLine">
+    <declare-styleable name="DottedItem">
         <attr name="minimumDotGap" format="dimension"/>
         <attr name="dotRadius" format="dimension"/>
         <attr name="dotColor" format="color"/>

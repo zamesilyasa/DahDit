@@ -36,11 +36,11 @@ class DottedLine
         val defaultBlack = Color.argb(255, 0, 0, 0)
 
         if (attrs != null) {
-            val typedArray = context?.theme?.obtainStyledAttributes(attrs, R.styleable.DottedLine, defStyleAttr, 0)
-            dotRadius = typedArray?.getDimension(R.styleable.DottedLine_dotRadius, twoDpDefault) ?: twoDpDefault
-            minimumDotGap = typedArray?.getDimension(R.styleable.DottedLine_minimumDotGap, twoDpDefault) ?: twoDpDefault
-            paint.color = typedArray?.getColor(R.styleable.DottedLine_dotColor, defaultBlack) ?: defaultBlack
-            val orientationOrdinal = typedArray?.getInt(R.styleable.DottedLine_orientation, Orientation.HORIZONTAL.ordinal)
+            val typedArray = context?.theme?.obtainStyledAttributes(attrs, R.styleable.DottedItem, defStyleAttr, 0)
+            dotRadius = typedArray?.getDimension(R.styleable.DottedItem_dotRadius, twoDpDefault) ?: twoDpDefault
+            minimumDotGap = typedArray?.getDimension(R.styleable.DottedItem_minimumDotGap, twoDpDefault) ?: twoDpDefault
+            paint.color = typedArray?.getColor(R.styleable.DottedItem_dotColor, defaultBlack) ?: defaultBlack
+            val orientationOrdinal = typedArray?.getInt(R.styleable.DottedItem_orientation, Orientation.HORIZONTAL.ordinal)
                     ?: Orientation.HORIZONTAL.ordinal
             if (orientationOrdinal == Orientation.VERTICAL.ordinal) {
                 orientation = Orientation.VERTICAL
